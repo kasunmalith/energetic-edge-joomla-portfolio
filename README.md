@@ -28,6 +28,7 @@ The platform also showcases event coverage through articles and photo-album page
 | Services | Web applications, websites, photography, cinematography, printing and live services |
 | Event coverage | School, university, corporate and concert event stories |
 | Photo albums | Album pages with photographer credits, event details and photo counts |
+| Protected albums | Password-controlled access for article photo galleries when an event requires private viewing |
 | Event discovery | Recent event listings organised by date and category |
 | Content publishing | Joomla articles, categories, menus and media-driven layouts |
 
@@ -38,7 +39,13 @@ The platform also showcases event coverage through articles and photo-album page
 - **Database:** MySQL/MariaDB
 - **Web server:** Apache-compatible rewrite configuration
 - **Extensions:** Joomla components, modules and plugins
-- **Integrations:** Source for gallery and Google-related integrations is managed separately from this portfolio edition
+- **Gallery integration:** Google Drive API for album delivery
+
+## Google Drive photo delivery
+
+Event photographs are stored in Google Drive. The gallery integration uses the Google Drive API to retrieve the relevant album images and display them on the matching website article or album page. This allows gallery media to remain in Drive while the Joomla website presents the event experience to visitors.
+
+For events that need private access, the platform can apply a password to the article photo gallery before images are displayed.
 
 ## Project structure
 
@@ -68,7 +75,7 @@ This repository contains the Joomla application source and public framework asse
 
 Use [configuration.example.php](configuration.example.php) only as a local template. It contains no production credentials or production secret keys.
 
-The Google Drive album integration also receives its API key and parent-folder IDs through server environment variables. See [.env.example](.env.example); production values are not stored in this repository.
+The Google Drive album integration receives its API key and parent-folder IDs through server environment variables. See [.env.example](.env.example); production values are not stored in this repository.
 
 ## Development experience
 
