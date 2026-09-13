@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<extension type="plugin" version="2.5.0" method="upgrade" group="content">
+	<name>Full Screen KM album</name>
+	<author>Kasun Malith</author>
+	<version>1.0.0</version>
+	<description>A full screen ajax album</description>
+	<files>
+		
+<filename>fancybox.png</filename>
+<filename>fskmalbum.css</filename>
+<filename>fskmalbum.js</filename>
+
+<filename plugin="fskmalbum">fskmalbum.php</filename>
+
+<filename>fskmalbum.xml</filename>
+<filename>index.html</filename>
+<filename>load.php</filename>
+<filename>preloader-w8-cycle-white.gif</filename>
+<filename>AG_jQuery.js</filename>
+<folder>fancybox</folder>
+	</files>
+	<config></config>
+</extension>

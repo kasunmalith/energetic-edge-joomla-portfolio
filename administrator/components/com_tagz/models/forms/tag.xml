@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+    <fieldset name="general" addfieldpath="administator/com_tagz/models/fields">
+        <field name="callout_general_start" type="callout" class="bs-callout-trans" start="1" label="COM_TAGZ_GENERAL" />
+            <field name="lock_tag" type="radio" default="0" label="COM_TAGZ_LOCK_TAG_QUESTION" description="COM_TAGZ_LOCK_TAG_DESC" class="btn-group btn-group-yesno">
+              <option value="1">JYES</option>
+              <option value="0">JNO</option>
+            </field>
+            <field name="note_get_tag_info" type="note4" text="COM_TAGZ_GET_TAG_INFO_NOTE" />
+            <field name="get_tag_info" description="COM_TAGZ_GET_TAG_INFO_DESC" label="COM_TAGZ_GET_INFO" type="button" class="btn-no-border btn-success input-356" icon="download" id="get_tag_info" text="COM_TAGZ_DOWNLOAD" />
+        <field name="callout_general_end" type="callout" end="1" />
+
+        <field name="component_type" type="hidden"></field>
+        <field name="component_id" type="hidden"></field>
+        <field name="title" type="hidden"></field>
+    </fieldset>
+
+    <fieldset name="general_menu" addfieldpath="administator/com_tagz/models/fields">
+        <field name="callout_general_start" type="callout" class="bs-callout-trans" start="1" label="COM_TAGZ_GENERAL" />
+            <field name="lock_tag" type="radio" default="0" label="COM_TAGZ_LOCK_TAG_QUESTION" description="COM_TAGZ_LOCK_TAG_DESC" class="btn-group btn-group-yesno">
+              <option value="1">JYES</option>
+              <option value="0">JNO</option>
+            </field>
+        <field name="callout_general_end" type="callout" end="1" />
+
+        <field name="component_type" type="hidden"></field>
+        <field name="component_id" type="hidden"></field>
+        <field name="title" type="hidden"></field>
+    </fieldset>
+
+    <fieldset name="facebook" addfieldpath="administator/com_tagz/models/fields">
+
+        <field name="callout_facebook_og_start" type="callout" class="bs-callout-trans bs-network facebook" start="1" label="Open Graph (Facebook, WhatsApp, LinkedIn, ...)" />
+            <field name="fb_title" type="text" size="40" class="input-500" hint="COM_TAGZ_OG_TITLE_DESC,70" label="COM_TAGZ_OG_TITLE" maxlength="80" description="COM_TAGZ_OG_TITLE_DESC,70" required="true" />
+            <field name="fb_description" type="textarea" size="40" class="input-500" maxlength="300" rows="8" label="COM_TAGZ_OG_DESCRIPTION" description="COM_TAGZ_OG_DESCRIPTION_DESC,155" hint="COM_TAGZ_OG_DESCRIPTION_DESC,155" required="true" />
+            <field name="fb_image" type="media" preview_width="500" class="" label="COM_TAGZ_OG_IMAGE" directory="" />
+            <field name="note_fb_image_req" type="note4" text="COM_TAGZ_FB_IMAGE_REQ" class="neg_margin_top" />
+        <field name="callout_facebook_og_end" type="callout" end="1" />
+
+    </fieldset>
+
+      <fieldset name="facebookpreview" addfieldpath="administator/com_tagz/models/fields">
+        <field name="callout_facebook_preview_start" type="callout" class="bs-callout-trans bs-network facebook" start="1" label="Open Graph Preview" />
+            <field name="preview_fb" type="rh_preview" network="fb" />
+        <field name="callout_facebook_preview_end" type="callout" end="1" />
+
+      </fieldset>
+
+    <fieldset name="twitter" addfieldpath="administator/com_tagz/models/fields">
+
+        <field name="callout_twitter_cards_start" type="callout" class="bs-callout-trans bs-network twitter" start="1" label="Twitter Card" />
+            <field name="twitter_title" type="text" size="40" class="input-500" hint="COM_TAGZ_OG_TITLE_DESC,70" label="COM_TAGZ_TWITTER_TITLE" maxlength="80" description="COM_TAGZ_OG_TITLE_DESC,70" required="true" />
+            <field name="twitter_description" type="textarea" size="40" class="input-500" maxlength="300" rows="8" label="COM_TAGZ_TWITTER_DESCRIPTION" description="COM_TAGZ_OG_DESCRIPTION_DESC,155" hint="COM_TAGZ_OG_DESCRIPTION_DESC,155" required="true" />
+            <field name="twitter_image" type="media" preview_width="500" class="" label="COM_TAGZ_TWITTER_IMAGE" directory="" />
+            <field name="note_twitter_image_req" type="note4" text="COM_TAGZ_TWITTER_IMAGE_REQ" class="neg_margin_top" />
+        <field name="callout_twitter_cards_end" type="callout" end="1" />
+
+    </fieldset>
+
+     <fieldset name="twitterpreview" addfieldpath="administator/com_tagz/models/fields">
+        <field name="callout_twitter_preview_start" type="callout" class="bs-callout-trans bs-network twitter" start="1" label="Twitter Preview" />
+                <field name="preview_twitter" type="rh_preview" network="twitter" />
+            <field name="callout_twitter_preview_end" type="callout" end="1" />
+     </fieldset>
+
+
+    <fieldset name="advanced" addfieldpath="administator/com_tagz/models/fields">
+        <field name="callout_advanced_start" type="callout" class="bs-callout-trans" start="1" label="COM_TAGZ_ADVANCED" />
+            
+            
+            <field disabled="true" type="text" size="100" class="input-500" hint="COM_TAGZ_CUSTOM_OG_URL" label="COM_TAGZ_CUSTOM_OG_URL" maxlength="100" description="COM_TAGZ_CUSTOM_OG_URL_DESC" />
+            <field name="gopro" type="gopro" />
+            
+
+        <field name="callout_advanced_end" type="callout" end="1" />
+    </fieldset>
+
+</form>

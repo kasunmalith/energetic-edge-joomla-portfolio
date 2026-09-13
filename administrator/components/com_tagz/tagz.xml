@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.4" method="upgrade">
+    <name>com_tagz</name>
+    <creationDate>January 08 2024</creationDate>
+    <copyright>Copyright 2014-2024 roosterz.nl</copyright>
+    <license>GNU General Public License version 3 or later; see LICENSE.txt</license>
+    <author>roosterz.nl</author>
+    <authorEmail>roy@roosterz.nl</authorEmail>
+    <authorUrl>https://www.roosterz.nl</authorUrl>
+    <version>5.0.1 FREE</version>
+    <description>TAGZ - Open Graph Tags / Twitter Cards Like a BOSS</description>
+
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/tagz.sql</file>
+        </sql>
+    </install>
+
+    <media destination="com_tagz" folder="media">
+        <folder>js</folder>
+        <folder>css</folder>
+    </media>
+
+    <administration>
+        <menu>COM_TAGZ</menu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>tagz.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+			<language tag="en-GB">en-GB/en-GB.com_tagz.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_tagz.sys.ini</language>
+        </languages>
+    </administration>
+
+    <plugins>
+        <plugin group="system" plugin="tagz"/>
+    </plugins>
+
+</extension>

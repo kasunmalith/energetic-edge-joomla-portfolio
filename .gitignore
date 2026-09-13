@@ -1,0 +1,47 @@
+# Joomla deployment settings and generated data
+/\.env
+/\.env.*
+!/.env.example
+/configuration.php
+!/configuration.example.php
+/cache/
+/tmp/
+/logs/
+/administrator/cache/
+/administrator/components/com_akeebabackup/backup/
+/administrator/components/com_akeebabackup/backup2/
+/administrator/components/com_akeebabackup/backup3/
+/administrator/components/com_akeebabackup/installers/
+/error_log
+*.log
+*.sql
+*.sqlite
+*.zip
+*.tar
+*.gz
+*.bak
+*.pdf
+*.csv
+
+# Client galleries and uploaded files
+/article_images/
+/files/
+/images/
+
+# API test/integration material
+/gapi_test/
+/google_api/
+/Cc/
+
+# Hosting and local machine files
+.user.ini
+php.ini
+.htaccess.lock-*
+.htaccess.phpupgrader*
+Thumbs.db
+.DS_Store
+Desktop.ini
+
+# Dependency installs
+/vendor/
+/node_modules/

@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+
+    <fieldset name="general" addfieldpath="administator/com_tagz/models/fields">
+        <field name="callout_general_start" type="callout" class="bs-callout-trans" start="1" label="COM_TAGZ_CONFIG_GLOBAL" />
+            <field name="og_site_name" size="40" class="input-500" label="COM_TAGZ_SITENAME" description="COM_TAGZ_SITENAME_DESC" default="" hint="COM_TAGZ_SITENAME_DESC" />
+
+            <field name="conflict_priority" class="input-385" type="rh_fancylist4"
+            default="component" label="COM_TAGZ_PRIORITY_CONFLICT" description="COM_TAGZ_PRIORITY_CONFLICT_DESC">
+                <option value="component">Component</option>
+                <option value="menu">Menu Item</option>
+            </field>
+
+            <field name="remove_other_tags" type="radio" default="0" label="COM_TAGZ_REMOVE_OTHER_TAGS" description="COM_TAGZ_REMOVE_OTHER_TAGS_DESC" class="btn-group btn-group-yesno">
+              <option value="1">JYES</option>
+              <option value="0">JNO</option>
+            </field>
+            <field name="automatic_tags_fetching" type="radio" default="0" label="COM_TAGZ_AUTO_FETCH_TAGS" description="COM_TAGZ_AUTO_FETCH_TAGS_DESC" class="btn-group btn-group-yesno">
+              <option value="1">JYES</option>
+              <option value="0">JNO</option>
+            </field>
+            <field name="remove_plugin_shortcodes" type="radio" default="0" label="COM_TAGZ_REMOVE_PLUGIN_SHORTCODES" description="COM_TAGZ_REMOVE_PLUGIN_SHORTCODES_DESC" class="btn-group btn-group-yesno">
+              <option value="1">JYES</option>
+              <option value="0">JNO</option>
+            </field>
+            <field name="note_get_image_from_content" type="note4" text="COM_TAGZ_GET_IMAGE_FROM_CONTENT_DESC" />
+            <field name="get_image_from_content" type="radio" default="0" label="COM_TAGZ_GET_IMAGE_FROM_CONTENT" description="COM_TAGZ_GET_IMAGE_FROM_CONTENT_DESC" class="btn-group btn-group-yesno">
+              <option value="1">JYES</option>
+              <option value="0">JNO</option>
+            </field>
+            <field name="move_tags_to_end_of_head" type="radio" default="0" label="COM_TAGS_MOVE_TO_END_OF_HEAD" description="COM_TAGS_MOVE_TO_END_OF_HEAD_DESC" class="btn-group btn-group-yesno">
+              <option value="1">JYES</option>
+              <option value="0">JNO</option>
+            </field>
+            <field name="skip_getimagesize" type="radio" default="0" label="COM_TAGS_SKIP_GETIMAGESIZE" description="COM_TAGS_SKIP_GETIMAGESIZE_DESC" class="btn-group btn-group-yesno">
+              <option value="1">JYES</option>
+              <option value="0">JNO</option>
+            </field>
+        <field name="callout_general_end" type="callout" end="1" />
+    </fieldset>
+
+    <fieldset name="updates" addfieldpath="administator/com_tagz/models/fields">
+        <field name="callout_updates_start" type="callout" class="bs-callout-trans" start="1" label="COM_TAGZ_UPDATES" />
+            <field name="note_updates" type="note4" text="COM_TAGZ_DOWNLOAD_ID_DESC" />
+            <field name="dlid" type="text" class="input-500" label="Download ID" default="" description="COM_TAGZ_DOWNLOAD_ID_DESC" />
+        <field name="callout_updates_end" type="callout" end="1" />
+    </fieldset>
+
+    <fieldset name="og" addfieldpath="administator/com_tagz/models/fields">
+
+        <field name="callout_facebook_og_start" type="callout" class="bs-callout-trans bs-network facebook" start="1" label="Open Graph" />
+            <field name="fb_app_id" type="text" size="40" class="input-500" label="Facebook App ID" description="COM_TAGZ_FB_APP_ID_DESC" default="" hint="COM_TAGZ_FB_APP_ID_DESC_SHORT" />
+            <field name="og_type" class="input-385" type="rh_fancylist4" default="website"
+            label="COM_TAGZ_OG_TYPE" description="COM_TAGZ_OG_TYPE_DESC">
+                <option value="website">Website (default)</option>
+                <option value="article">Article</option>
+                <option value="product">Product</option>
+            </field>
+            <!-- <field name="fb_app_id" type="text" size="40" class="input-500" hint="COM_TAGZ_FB_APP_ID_DESC" label="COM_TAGZ_FB_APP_ID" description="COM_TAGZ_FB_APP_ID_DESC" /> -->
+            <field name="fb_max_title_length" type="number" size="40" class="input-500" label="COM_TAGZ_FB_MAX_TITLE_LENGTH" description="COM_TAGZ_FB_MAX_TITLE_LENGTH_DESC" default="70" hint="COM_TAGZ_FB_MAX_TITLE_LENGTH_DESC" />
+            <field name="fb_max_description_length" type="number" size="40" class="input-500" label="COM_TAGZ_FB_MAX_DESCRIPTION_LENGTH" description="COM_TAGZ_FB_MAX_DESCRIPTION_LENGTH_DESC" default="155" hint="COM_TAGZ_FB_MAX_DESCRIPTION_LENGTH_DESC" />
+
+            <field name="note_defaults" type="note4" text="COM_TAGZ_DEFAULTS_NOTE" />
+            <field name="default_fb_title" type="text" size="40" class="input-500" hint="COM_TAGZ_DEFAULT_TITLE_DESC,70" label="COM_TAGZ_DEFAULT_TITLE, Open Graph" maxlength="80" description="COM_TAGZ_DEFAULT_TITLE_DESC,70" />
+            <field name="default_fb_description" type="textarea" size="40" class="input-500" maxlength="300" rows="8" label="COM_TAGZ_DEFAULT_DESCRIPTION, Open Graph" description="COM_TAGZ_DEFAULT_DESCRIPTION_DESC,155" hint="COM_TAGZ_DEFAULT_DESCRIPTION_DESC,155" />
+            <field name="default_fb_image" type="media" preview_width="500"
+                   class="" description="COM_TAGZ_DEFAULT_IMAGE_NOTE, Open Graph"
+                   label="COM_TAGZ_DEFAULT_IMAGE, Open Graph"
+                   directory=""
+				   hide_none="1"
+				   size="40" />
+
+        <field name="callout_facebook_og_end" type="callout" end="1" />
+
+    </fieldset>
+
+    <fieldset name="twitter" addfieldpath="administator/com_tagz/models/fields">
+
+        <field name="callout_twitter_cards_start" type="callout" class="bs-callout-trans bs-network twitter" start="1" label="Twitter Card" />
+            <field name="twitter_card" class="input-385" type="rh_fancylist4" default="summary_large_image" label="COM_TAGZ_TWIITER_CARD" description="COM_TAGZ_TWIITER_CARD_DESC">
+                <option value="summary">Summary</option>
+                <option value="summary_large_image">Summary Large Image (default)</option>
+            </field>
+            <field name="twitter_site" type="text" size="40" class="input-500" hint="COM_TAGZ_TWITTER_CREATOR_DESC" label="COM_TAGZ_TWITTER_CREATOR" description="COM_TAGZ_TWITTER_CREATOR_DESC" />
+            <field name="twitter_max_title_length" type="number" size="40" class="input-500" label="COM_TAGZ_TWITTER_MAX_TITLE_LENGTH" description="COM_TAGZ_TWITTER_MAX_TITLE_LENGTH_DESC" default="70" hint="COM_TAGZ_TWITTER_MAX_TITLE_LENGTH_DESC" />
+            <field name="twitter_max_description_length" type="number" size="40" class="input-500" label="COM_TAGZ_TWITTER_MAX_DESCRIPTION_LENGTH" description="COM_TAGZ_TWITTER_MAX_DESCRIPTION_LENGTH_DESC" default="200" hint="COM_TAGZ_TWITTER_MAX_DESCRIPTION_LENGTH_DESC" />
+
+            <field name="note_defaults" type="note4" text="COM_TAGZ_DEFAULTS_NOTE" />
+            <field name="default_twitter_title" type="text" size="40" class="input-500" hint="COM_TAGZ_DEFAULT_TITLE_DESC,70" label="COM_TAGZ_DEFAULT_TITLE, Twitter Cards" maxlength="80" description="COM_TAGZ_DEFAULT_TITLE_DESC,70" />
+            <field name="default_twitter_description" type="textarea" size="40" class="input-500" maxlength="300" rows="8" label="COM_TAGZ_DEFAULT_DESCRIPTION, Twitter Cards" description="COM_TAGZ_DEFAULT_DESCRIPTION_DESC,155" hint="COM_TAGZ_DEFAULT_DESCRIPTION_DESC,200" />
+            <field name="default_twitter_image" type="media" preview_width="500" class="" description="COM_TAGZ_DEFAULT_IMAGE_NOTE, Twitter Cards" label="COM_TAGZ_DEFAULT_IMAGE, Twitter Cards" directory="" />
+        <field name="callout_twitter_cards_end" type="callout" end="1" />
+
+    </fieldset>
+
+    <fieldset name="content" addfieldpath="administator/com_tagz/models/fields">
+
+        <field name="callout_content_content_start" type="callout" class="bs-callout-trans" start="1" label="COM_TAGZ_CONTENT_SETTINGS" />
+
+        <field name="note_content_preferred_description" type="note4" text="COM_TAGZ_ENABLE_CUSTOM_FIELDS_CONTENT_DESC" />
+        <field name="content_custom_title" type="rh_customcontent" layout="joomla.form.field.list-fancy-select" excludeimages="true" default="title" label="COM_TAGZ_SELECT_THE_FIELD, Title" />
+
+        <field name="content_custom_description" type="rh_customcontent" layout="joomla.form.field.list-fancy-select" excludeimages="true" default="introtext" label="COM_TAGZ_SELECT_THE_FIELD, Description" />
+
+        <field name="content_custom_image" type="rh_customcontent" layout="joomla.form.field.list-fancy-select" default="image_intro" label="COM_TAGZ_SELECT_THE_FIELD, Image" />
+
+        <field name="callout_content_config_end" type="callout" end="1" />
+
+    </fieldset>
+
+    <fieldset name="hikashop" addfieldpath="administator/com_tagz/models/fields">
+
+        <field name="callout_content_content_start" type="callout" class="bs-callout-trans" start="1" label="COM_TAGZ_HIKASHOP_SETTINGS" />
+
+        <field name="hikashop_image_folder" type="text" size="40" class="input-500" label="COM_TAGZ_HIKASHOP_SETTINGS_IMAGE_FOLDER" description="COM_TAGZ_HIKASHOP_SETTINGS_IMAGE_FOLDER_DESC" default="images/com_hikashop/uploads" />
+
+        <field name="callout_content_config_end" type="callout" end="1" />
+
+    </fieldset>
+
+    <fieldset name="zoo" addfieldpath="administator/com_tagz/models/fields">
+
+        <field name="callout_zoo_config_start" type="callout" class="bs-callout-trans" start="1" label="ZOO Specific Settings (Advanced Usage)" />
+            <field name="note_zoo_strings" type="note4" text="COM_TAGZ_ZOO_CONFIG_NOTE" />
+
+            <field name="zoo_article_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Blog->Article" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Blog->Article" default="2e3c9e69-1f9e-4647-8d13-4e88094d2790" />
+            <field name="zoo_article_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Blog->Article" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Blog->Article" default="cdce6654-4e01-4a7f-9ed6-0407709d904c" />
+
+            <field name="zoo_author_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Blog->Author" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Blog->Author" default="14c0dd9f-ae3c-4eb2-8e22-4e9294ad3120" />
+            <field name="zoo_author_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Blog->Author" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Blog->Author" default="ffefb4ed-8d5d-452a-8794-ea82c013384e" />
+
+            <field name="zoo_movie_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Movie Database->Movie" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Movie Database->Movie" default="b40b44c8-a289-46b6-a6da-9f9824714762" />
+            <field name="zoo_movie_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Movie Database->Movie" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Movie Database->Movie" default="540aa2ad-9a8d-454d-b915-605b884e76d5" />
+
+            <field name="zoo_person_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Movie->Person" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Movie->Person" default="a552a157-ce11-4b11-ad34-5de19e065d53" />
+            <field name="zoo_person_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Movie->Person" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Movie->Person" default="93d283c0-eee0-473e-bf68-e5ebc3c3338e" />
+
+            <field name="zoo_automobile_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Product Catalog->Automobile" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Product Catalog->Automobile" default="83ba7366-d126-40f0-923e-3e7a94f0e773" />
+            <field name="zoo_automobile_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Product Catalog->Automobile" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Product Catalog->Automobile" default="c0794696-a5d2-4df9-b20f-f23b0f94a41b" />
+
+            <field name="zoo_book_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Product Catalog->Book" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Product Catalog->Book" default="83ba7366-d126-40f0-923e-3e7a94f0e773" />
+            <field name="zoo_book_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Product Catalog->Book" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Product Catalog->Book" default="246e955a-5a57-4ad0-ad8c-c15fc7bfccb6" />
+
+            <field name="zoo_camera_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Product Catalog->Camera" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Product Catalog->Camera" default="83ba7366-d126-40f0-923e-3e7a94f0e773" />
+            <field name="zoo_camera_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Product Catalog->Camera" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Product Catalog->Camera" default="246e955a-5a57-4ad0-ad8c-c15fc7bfccb6" />
+
+            <field name="zoo_cell-phone_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Product Catalog->Cell Phone" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Product Catalog->Cell Phone" default="83ba7366-d126-40f0-923e-3e7a94f0e773" />
+            <field name="zoo_cell-phone_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Product Catalog->Cell Phone" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Product Catalog->Cell Phone" default="246e955a-5a57-4ad0-ad8c-c15fc7bfccb6" />
+
+            <field name="zoo_furniture_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Product Catalog->Furniture" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Product Catalog->Furniture" default="83ba7366-d126-40f0-923e-3e7a94f0e773" />
+            <field name="zoo_furniture_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Product Catalog->Furniture" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Product Catalog->Furniture" default="246e955a-5a57-4ad0-ad8c-c15fc7bfccb6" />
+
+            <field name="zoo_product_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Product Catalog->Product" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Product Catalog->Product" default="83ba7366-d126-40f0-923e-3e7a94f0e773" />
+            <field name="zoo_product_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Product Catalog->Product" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Product Catalog->Product" default="246e955a-5a57-4ad0-ad8c-c15fc7bfccb6" />
+
+            <field name="zoo_shoe_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Product Catalog->Shoe" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Product Catalog->Shoe" default="83ba7366-d126-40f0-923e-3e7a94f0e773" />
+            <field name="zoo_shoe_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Product Catalog->Shoe" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Product Catalog->Shoe" default="246e955a-5a57-4ad0-ad8c-c15fc7bfccb6" />
+
+            <field name="zoo_watch_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Product Catalog->Watch" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Product Catalog->Watch" default="83ba7366-d126-40f0-923e-3e7a94f0e773" />
+            <field name="zoo_watch_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Product Catalog->Watch" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Product Catalog->Watch" default="246e955a-5a57-4ad0-ad8c-c15fc7bfccb6" />
+
+            <field name="zoo_file_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Download Archive->File" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Download Archive->File" default="c5121091-6f63-43ad-a86a-136025fe6da0" />
+            <field name="zoo_file_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Download Archive->File" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Download Archive->File" default="" />
+
+            <field name="zoo_company_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Business Directory->Company" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Business Directory->Company" default="1a85a7a6-2aba-4480-925b-6b97d311ee6c" />
+            <field name="zoo_company_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Business Directory->Company" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Business Directory->Company" default="ffcc1c50-8dbd-4115-b463-b43bdcd44a57" />
+
+            <field name="zoo_employee_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Business Directory->Employee" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Business Directory->Employee" default="241905cc-36d4-4611-a1d5-fadfe280f70e" />
+            <field name="zoo_employee_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Business Directory->Employee" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Business Directory->Employee" default="96624fe5-ff5a-4f1b-800e-a125e3980d43" />
+
+            <field name="zoo_recipe_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Cookbook->Recipe" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Cookbook->Recipe" default="35155961-b9ae-48d4-b4aa-1a569ec7930c" />
+            <field name="zoo_recipe_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Cookbook->Recipe" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Cookbook->Recipe" default="ff94e00f-5055-439f-8c3e-fe5bef815ad1" />
+
+            <field name="zoo_page_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Pages->Page" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Pages->Page" default="43aa1b15-986e-4303-afcf-628b835f10e5" />
+            <field name="zoo_page_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Pages->Page" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Pages->Page" default="6cb20a9f-27fa-4d98-ac2e-e959eb3f0f63" />
+
+            <!-- <field name="zoo_10_page_description_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Documentation->Page" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Documentation->Page" default="32a20413-8157-462f-8acc-6abe123f5fc3" />
+            <field name="zoo_10_page_image_string" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Documentation->Page" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Documentation->Page" default="" /> -->
+
+            <field name="callout_custom_types_start" type="callout" class="bs-callout-trans" start="1" label="COM_TAGZ_CUSTOM_TYPES" />
+                <field name="enable_zoo_custom_types" type="radio" default="0" label="COM_TAGZ_ENABLE_ZOO_CUSTOM_TYPES" description="COM_TAGZ_ENABLE_ZOO_CUSTOM_TYPES_DESC" class="btn-group btn-group-yesno">
+                  <option value="1">JYES</option>
+                  <option value="0">JNO</option>
+                </field>
+
+                <field name="custom_1" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_LABEL, 1" description="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_DESC, 1" default="" />
+                <field name="zoo_custom_1_description_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Custom type 1" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Custom type 1" default="" />
+                <field name="zoo_custom_1_image_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Custom type 1" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Custom type 1" default="" />
+
+                <field name="custom_2" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_LABEL, 2" description="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_DESC, 2" default="" />
+                <field name="zoo_custom_2_description_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Custom type 2" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Custom type 2" default="" />
+                <field name="zoo_custom_2_image_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Custom type 2" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Custom type 2" default="" />
+
+                <field name="custom_3" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_LABEL, 3" description="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_DESC, 3" default="" />
+                <field name="zoo_custom_3_description_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Custom type 3" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Custom type 3" default="" />
+                <field name="zoo_custom_3_image_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Custom type 3" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Custom type 3" default="" />
+
+                <field name="custom_4" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_LABEL, 4" description="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_DESC, 4" default="" />
+                <field name="zoo_custom_4_description_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Custom type 4" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Custom type 4" default="" />
+                <field name="zoo_custom_4_image_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Custom type 4" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Custom type 4" default="" />
+
+                <field name="custom_5" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_LABEL, 5" description="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_DESC, 5" default="" />
+                <field name="zoo_custom_5_description_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Custom type 5" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Custom type 5" default="" />
+                <field name="zoo_custom_5_image_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Custom type 5" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Custom type 5" default="" />
+
+                <field name="custom_6" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_LABEL, 6" description="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_DESC, 6" default="" />
+                <field name="zoo_custom_6_description_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Custom type 6" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Custom type 6" default="" />
+                <field name="zoo_custom_6_image_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Custom type 6" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Custom type 6" default="" />
+
+                <field name="custom_7" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_LABEL, 7" description="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_DESC, 7" default="" />
+                <field name="zoo_custom_7_description_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Custom type 7" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Custom type 7" default="" />
+                <field name="zoo_custom_7_image_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Custom type 7" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Custom type 7" default="" />
+
+                <field name="custom_8" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_LABEL, 8" description="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_DESC, 8" default="" />
+                <field name="zoo_custom_8_description_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Custom type 8" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Custom type 8" default="" />
+                <field name="zoo_custom_8_image_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Custom type 8" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Custom type 8" default="" />
+
+                <field name="custom_9" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_LABEL, 9" description="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_DESC, 9" default="" />
+                <field name="zoo_custom_9_description_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Custom type 9" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Custom type 9" default="" />
+                <field name="zoo_custom_9_image_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Custom type 9" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Custom type 9" default="" />
+
+                <field name="custom_10" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_LABEL, 10" description="COM_TAGZ_ZOO_SETTINGS_CUSTOM_TYPE_DESC, 10" default="" />
+                <field name="zoo_custom_10_description_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_LABEL, Custom type 10" description="COM_TAGZ_ZOO_SETTINGS_DESC_STRING_DESC, Custom type 10" default="" />
+                <field name="zoo_custom_10_image_string" showon="enable_zoo_custom_types:1" type="text" size="40" class="input-500" label="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_LABEL, Custom type 10" description="COM_TAGZ_ZOO_SETTINGS_IMAGE_STRING_DESC, Custom type 10" default="" />
+
+            <field name="callout_custom_types_end" type="callout" end="1" />
+
+        <field name="callout_zoo_config_end" type="callout" end="1" />
+
+    </fieldset>
+
+</form>
